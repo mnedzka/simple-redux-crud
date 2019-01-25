@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Link } from "react-router-dom";
+import { Route } from "react-router";
+import GamesPage from "./GamesPage";
 
 class App extends Component {
   render() {
@@ -11,6 +14,7 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
+          <Link to="games">games</Link>
           <a
             className="App-link"
             href="https://reactjs.org"
@@ -20,6 +24,8 @@ class App extends Component {
             Learn React
           </a>
         </header>
+
+        <Route path="/games" component={GamesPage} />
       </div>
     );
   }
